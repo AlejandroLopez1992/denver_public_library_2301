@@ -12,4 +12,13 @@ class Book
     @title  = info[:title]
     @publication_date = info[:publication_date]
   end
+
+
+  def author
+    @author_first_name + ' ' + @author_last_name
+  end
+
+  def publication_year
+    @publication_date.split[2]
+  end
 end
