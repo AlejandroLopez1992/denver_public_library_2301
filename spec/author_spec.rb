@@ -30,7 +30,11 @@ RSpec.describe Author do
   #                       author_last_name: "Bronte",
   #                       title: "Jane Eyre",
   #                       publication_date: "October 16, 1847"})
-  expect(charlotte_bronte.write("Jane Eyre", "October 16, 1847")).to be_instance_of(Book)
- 
+  # expect(charlotte_bronte.write("Jane Eyre", "October 16, 1847")).to be_instance_of(Book)
+  jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+  expect(jane_eyre.class).to eq(Book)
+  expect(jane_eyre.title).to eq("Jane Eyre")
+  villette = charlotte_bronte.write("Villette", "1853")
+  expect(charlotte_bronte.books).to eq([jane_eyre, villette])
   end
 end

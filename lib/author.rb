@@ -19,7 +19,8 @@ class Author
       title: title,
       publication_date: publication_date
     }
-    @books << Book.new(new_book)
-    Book.new(new_book)
+    written_book = Book.new(new_book)
+    @books << written_book
+    written_book
   end 
 end
