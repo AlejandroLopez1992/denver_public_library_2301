@@ -21,4 +21,6 @@ class Book
   def publication_year
     @publication_date.split[2]
   end
+
+  
 end
